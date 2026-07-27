@@ -1,4 +1,5 @@
 import pytest
+import requests
 
 from restock_notifier import notifier
 
@@ -43,6 +44,31 @@ def test_send_message_raises_on_http_error(monkeypatch):
 
     with pytest.raises(RuntimeError):
         notifier.send_message("TOKEN123", "CHAT456", "Hallo Welt")
+
+
+def test_send_message_masks_bot_token_on_http_error(monkeypatch):
+    token = "TOKENSECRET123"
+
+    class HttpErrorResponse:
+        status_code = 500
+
+        def raise_for_status(self):
+            raise requests.HTTPError(
+                f"500 Server Error: Internal Server Error for url: "
+                f"https://api.telegram.org/bot{token}/sendMessage",
+                response=self,
+            )
+
+    def fake_post(url, data, timeout):
+        return HttpErrorResponse()
+
+    monkeypatch.setattr(notifier.requests, "post", fake_post)
+
+    with pytest.raises(requests.HTTPError) as excinfo:
+        notifier.send_message(token, "CHAT456", "Hallo Welt")
+
+    assert token not in str(excinfo.value)
+    assert "***" in str(excinfo.value)
 
 
 def test_format_restock_message():

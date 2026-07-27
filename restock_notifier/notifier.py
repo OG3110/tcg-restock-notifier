@@ -10,7 +10,14 @@ def send_message(bot_token, chat_id, text):
         data={"chat_id": chat_id, "text": text},
         timeout=10,
     )
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.HTTPError as exc:
+        # requests' HTTPError message embeds the full request URL, which
+        # contains the bot token in plain text. Mask it before it can end
+        # up in logs, stack traces, or (locally) an uncaught exception.
+        masked_message = str(exc).replace(bot_token, "***")
+        raise requests.HTTPError(masked_message, response=exc.response) from exc
     return response.json()
 
 
