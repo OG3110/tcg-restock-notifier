@@ -156,6 +156,70 @@ def test_run_end_to_end_with_fakes(tmp_path):
     assert saved_state["op17-display-fantasiacards"]["status"] == "available"
 
 
+def test_run_with_persist_state_false_leaves_state_file_untouched(tmp_path):
+    shops_path = tmp_path / "shops.json"
+    products_path = tmp_path / "products.json"
+    state_path = tmp_path / "state.json"
+
+    shops_path.write_text(json.dumps({"fantasiacards": {"type": "shopify"}}), encoding="utf-8")
+    products_path.write_text(json.dumps([{
+        "id": "op17-display-fantasiacards",
+        "name": "One Piece OP17 Display",
+        "shop": "fantasiacards",
+        "url": "https://fantasiacards.de/products/one-piece-card-game-op17-display-eng",
+    }]), encoding="utf-8")
+
+    original_state = {
+        "op17-display-fantasiacards": {
+            "status": "unavailable", "consecutive_errors": 0,
+            "consecutive_unavailable_checks": 5, "stale_warned": False,
+        }
+    }
+    state_path.write_text(json.dumps(original_state), encoding="utf-8")
+    original_bytes = state_path.read_bytes()
+
+    sent = []
+    run(
+        products_path, shops_path, state_path,
+        send_fn=sent.append,
+        fetch_fn=make_fetch_fn(AVAILABLE_HTML),
+        persist_state=False,
+    )
+
+    # A restock transition was detected and "sent" via the fake send_fn...
+    assert len(sent) == 1
+    assert "wieder verfügbar" in sent[0]
+    # ...but with persist_state=False, state.json on disk must be untouched.
+    assert state_path.read_bytes() == original_bytes
+
+
+def test_run_default_persist_state_true_still_writes_state_file(tmp_path):
+    # Guards against a regression where persist_state's default value
+    # silently changes and stops writing state.json (as happens today,
+    # unconditionally, before --dry-run was fixed to pass persist_state=False).
+    shops_path = tmp_path / "shops.json"
+    products_path = tmp_path / "products.json"
+    state_path = tmp_path / "state.json"
+
+    shops_path.write_text(json.dumps({"fantasiacards": {"type": "shopify"}}), encoding="utf-8")
+    products_path.write_text(json.dumps([{
+        "id": "op17-display-fantasiacards",
+        "name": "One Piece OP17 Display",
+        "shop": "fantasiacards",
+        "url": "https://fantasiacards.de/products/one-piece-card-game-op17-display-eng",
+    }]), encoding="utf-8")
+
+    run(
+        products_path, shops_path, state_path,
+        send_fn=lambda text: None,
+        fetch_fn=make_fetch_fn(AVAILABLE_HTML),
+    )
+
+    assert state_path.exists()
+    saved_state = json.loads(state_path.read_text(encoding="utf-8"))
+    assert saved_state["op17-display-fantasiacards"]["status"] == "available"
+
+
 def test_run_continues_after_one_product_send_fn_raises(tmp_path, capsys):
     shops_path = tmp_path / "shops.json"
     products_path = tmp_path / "products.json"

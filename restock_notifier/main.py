@@ -57,7 +57,7 @@ def process_product(product, state, send_fn, fetch_fn):
     state[product["id"]] = entry
 
 
-def run(products_path, shops_path, state_path, send_fn, fetch_fn=fetch_for_product):
+def run(products_path, shops_path, state_path, send_fn, fetch_fn=fetch_for_product, persist_state=True):
     watchlist = load_watchlist(products_path, shops_path)
     state = load_state(state_path)
 
@@ -67,7 +67,8 @@ def run(products_path, shops_path, state_path, send_fn, fetch_fn=fetch_for_produ
         except Exception as exc:
             print(f"Error processing product {product['id']}: {exc}", file=sys.stderr)
 
-    save_state(state_path, state)
+    if persist_state:
+        save_state(state_path, state)
 
 
 def build_send_fn(bot_token, chat_id, dry_run):
@@ -96,7 +97,13 @@ def main():
 
     root = Path(__file__).resolve().parent.parent
     send_fn = build_send_fn(bot_token, chat_id, args.dry_run)
-    run(root / "products.json", root / "shops.json", root / "state.json", send_fn)
+    run(
+        root / "products.json",
+        root / "shops.json",
+        root / "state.json",
+        send_fn,
+        persist_state=not args.dry_run,
+    )
 
 
 if __name__ == "__main__":
