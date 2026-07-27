@@ -1,0 +1,4 @@
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+soupsieve>=2.5,<3
+playwright>=1.40,<2
