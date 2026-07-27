@@ -11,6 +11,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
@@ -21,8 +22,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Install Playwright browser
-        run: playwright install --with-deps chromium
+      # No shop in shops.json currently uses "render": "playwright" (all
+      # shops are fetched via plain HTTP), so a full Playwright/Chromium
+      # install here would just be wasted time on every run. If a shop is
+      # later configured with "render": "playwright" in shops.json, re-add
+      # a step here:
+      #   - name: Install Playwright browser
+      #     run: playwright install --with-deps chromium
 
       - name: Run restock check
         env:
