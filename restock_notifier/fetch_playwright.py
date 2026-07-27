@@ -2,10 +2,10 @@ from restock_notifier.fetch import FetchError
 
 
 def fetch_html_playwright(url, sync_playwright_factory=None):
-    if sync_playwright_factory is None:
-        from playwright.sync_api import sync_playwright as sync_playwright_factory
-
     try:
+        if sync_playwright_factory is None:
+            from playwright.sync_api import sync_playwright as sync_playwright_factory
+
         with sync_playwright_factory() as p:
             browser = p.chromium.launch()
             try:
