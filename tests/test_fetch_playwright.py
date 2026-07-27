@@ -1,11 +1,16 @@
 from unittest.mock import MagicMock
 
+import pytest
+
+from restock_notifier.fetch import FetchError
 from restock_notifier.fetch_playwright import fetch_html_playwright
 
 
-def make_fake_factory(html):
+def make_fake_factory(html, goto_error=None):
     page = MagicMock()
     page.content.return_value = html
+    if goto_error is not None:
+        page.goto.side_effect = goto_error
 
     browser = MagicMock()
     browser.new_page.return_value = page
@@ -36,5 +41,28 @@ def test_fetch_html_playwright_closes_browser():
     factory, page, browser = make_fake_factory("<html>x</html>")
 
     fetch_html_playwright("https://example.com", sync_playwright_factory=factory)
+
+    browser.close.assert_called_once()
+
+
+def test_fetch_html_playwright_raises_fetch_error_on_goto_failure():
+    factory, page, browser = make_fake_factory(
+        "<html>unused</html>", goto_error=TimeoutError("navigation timed out")
+    )
+
+    with pytest.raises(FetchError) as excinfo:
+        fetch_html_playwright("https://example.com", sync_playwright_factory=factory)
+
+    assert "https://example.com" in str(excinfo.value)
+    assert "navigation timed out" in str(excinfo.value)
+
+
+def test_fetch_html_playwright_closes_browser_even_on_goto_failure():
+    factory, page, browser = make_fake_factory(
+        "<html>unused</html>", goto_error=TimeoutError("navigation timed out")
+    )
+
+    with pytest.raises(FetchError):
+        fetch_html_playwright("https://example.com", sync_playwright_factory=factory)
 
     browser.close.assert_called_once()
