@@ -17,7 +17,7 @@ def send_message(bot_token, chat_id, text):
         # contains the bot token in plain text. Mask it before it can end
         # up in logs, stack traces, or (locally) an uncaught exception.
         masked_message = str(exc).replace(bot_token, "***")
-        raise requests.HTTPError(masked_message, response=exc.response) from exc
+        raise requests.HTTPError(masked_message, response=exc.response) from None
     return response.json()
 
 

@@ -69,6 +69,8 @@ def test_send_message_masks_bot_token_on_http_error(monkeypatch):
 
     assert token not in str(excinfo.value)
     assert "***" in str(excinfo.value)
+    # Verify exception chain is suppressed to fully mask the token in tracebacks
+    assert excinfo.value.__cause__ is None
 
 
 def test_format_restock_message():
