@@ -154,3 +154,51 @@ def test_run_end_to_end_with_fakes(tmp_path):
     assert len(sent) == 1
     saved_state = json.loads(state_path.read_text(encoding="utf-8"))
     assert saved_state["op17-display-fantasiacards"]["status"] == "available"
+
+
+def test_run_continues_after_one_product_send_fn_raises(tmp_path, capsys):
+    shops_path = tmp_path / "shops.json"
+    products_path = tmp_path / "products.json"
+    state_path = tmp_path / "state.json"
+
+    shops_path.write_text(json.dumps({"fantasiacards": {"type": "shopify"}}), encoding="utf-8")
+    products_path.write_text(json.dumps([
+        {
+            "id": "product-a",
+            "name": "Product A",
+            "shop": "fantasiacards",
+            "url": "https://fantasiacards.de/products/a",
+        },
+        {
+            "id": "product-b",
+            "name": "Product B",
+            "shop": "fantasiacards",
+            "url": "https://fantasiacards.de/products/b",
+        },
+    ]), encoding="utf-8")
+
+    calls = []
+
+    def flaky_send_fn(text):
+        calls.append(text)
+        if len(calls) == 1:
+            raise RuntimeError("telegram 500")
+
+    # Should not raise out of run(), even though send_fn blows up for the
+    # first product.
+    run(
+        products_path, shops_path, state_path,
+        send_fn=flaky_send_fn,
+        fetch_fn=make_fetch_fn(AVAILABLE_HTML),
+    )
+
+    # send_fn was invoked for both products (product-b was still processed).
+    assert len(calls) == 2
+
+    # save_state() still ran at the end, with product-b's update persisted.
+    assert state_path.exists()
+    saved_state = json.loads(state_path.read_text(encoding="utf-8"))
+    assert saved_state["product-b"]["status"] == "available"
+
+    err = capsys.readouterr().err
+    assert "product-a" in err

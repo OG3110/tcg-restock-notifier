@@ -1,5 +1,6 @@
 import argparse
 import os
+import sys
 from pathlib import Path
 
 from restock_notifier.availability import determine_status
@@ -61,7 +62,10 @@ def run(products_path, shops_path, state_path, send_fn, fetch_fn=fetch_for_produ
     state = load_state(state_path)
 
     for product in watchlist:
-        process_product(product, state, send_fn, fetch_fn)
+        try:
+            process_product(product, state, send_fn, fetch_fn)
+        except Exception as exc:
+            print(f"Error processing product {product['id']}: {exc}", file=sys.stderr)
 
     save_state(state_path, state)
 
