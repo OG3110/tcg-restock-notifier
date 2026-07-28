@@ -51,3 +51,4 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: update state.json [skip ci]"
           git pull --rebase
           git push
+
