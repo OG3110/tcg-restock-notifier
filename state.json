@@ -1,7 +1,7 @@
 {
   "op17-display-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 3,
+    "consecutive_unavailable_checks": 4,
     "stale_warned": false,
     "status": "unavailable"
   }
