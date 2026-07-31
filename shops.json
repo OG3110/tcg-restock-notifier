@@ -3,12 +3,14 @@
     "type": "shopify"
   },
   "card-corner": {
-    "selector": "button.btn-primary:not([disabled])",
-    "mode": "found_means_available"
+    "selector": ".ausverkauft-inWarenkorb button:not([disabled])",
+    "mode": "found_means_available",
+    "render": "playwright"
   },
   "sapphire-cards": {
     "selector": ".stock.in-stock",
-    "mode": "found_means_available"
+    "mode": "found_means_available",
+    "render": "playwright"
   },
   "comicplanet": {
     "selector": "button.btn-buy:not([disabled])",
