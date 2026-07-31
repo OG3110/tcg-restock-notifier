@@ -4,5 +4,59 @@
     "name": "One Piece OP17 Display",
     "shop": "fantasiacards",
     "url": "https://fantasiacards.de/products/one-piece-card-game-op17-display-eng"
+  },
+  {
+    "id": "fatale-flammen-ttb-card-corner",
+    "name": "Pokemon TTB Mega-Entwicklung: Fatale Flammen",
+    "shop": "card-corner",
+    "url": "https://www.card-corner.de/Pokemon-Fatale-Flammen-Top-Trainer-Box"
+  },
+  {
+    "id": "erhabene-helden-ttb-card-corner",
+    "name": "Pokemon TTB Mega-Entwicklung: Erhabene Helden",
+    "shop": "card-corner",
+    "url": "https://www.card-corner.de/Pokemon-Erhabene-Helden-Top-Trainer-Box"
+  },
+  {
+    "id": "30th-celebration-booster-bundle-fantasiacards",
+    "name": "Pokemon 30th Celebration Booster Bundle",
+    "shop": "fantasiacards",
+    "url": "https://fantasiacards.de/products/pokemon-30th-celebration-booster-bundle-eng"
+  },
+  {
+    "id": "pitch-black-display-fantasiacards",
+    "name": "Pokemon Mega Evolution Pitch Black Display (36er)",
+    "shop": "fantasiacards",
+    "url": "https://fantasiacards.de/products/pokemon-pitch-black-display-eng"
+  },
+  {
+    "id": "pitch-black-display-sapphire-cards",
+    "name": "Pokemon Mega Evolution Pitch Black Display (36er)",
+    "shop": "sapphire-cards",
+    "url": "https://sapphire-cards.de/produkt/pokemon-dunkelnacht-pitch-black-booster-box-display/"
+  },
+  {
+    "id": "30th-celebration-mini-tins-fantasiacards",
+    "name": "Pokemon 30th Celebration Mini Tins (10er)",
+    "shop": "fantasiacards",
+    "url": "https://fantasiacards.de/products/pokemon-30th-celebration-mini-tin-display-eng"
+  },
+  {
+    "id": "st35-sabo-comicplanet",
+    "name": "One Piece CG Starter Deck ST35 Sabo (EN)",
+    "shop": "comicplanet",
+    "url": "https://www.comicplanet.de/sammelkarten/one-piece/starter-op/one-piece-cg-starter-deck-st35-sabo-englisch"
+  },
+  {
+    "id": "st32-zoro-comicplanet",
+    "name": "One Piece CG Starter Deck ST32 Roronoa Zoro (EN)",
+    "shop": "comicplanet",
+    "url": "https://www.comicplanet.de/sammelkarten/one-piece/starter-op/one-piece-cg-starter-deck-st32-roronoa-zoro-englisch"
+  },
+  {
+    "id": "st31-luffy-comicplanet",
+    "name": "One Piece CG Starter Deck ST31 Monkey.D.Luffy (EN)",
+    "shop": "comicplanet",
+    "url": "https://www.comicplanet.de/sammelkarten/one-piece/starter-op/one-piece-cg-starter-deck-st31-monkey.d.luffy-englisch"
   }
 ]

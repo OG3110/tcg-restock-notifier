@@ -1,5 +1,17 @@
 {
   "fantasiacards": {
     "type": "shopify"
+  },
+  "card-corner": {
+    "selector": "button.btn-primary:not([disabled])",
+    "mode": "found_means_available"
+  },
+  "sapphire-cards": {
+    "selector": ".stock.in-stock",
+    "mode": "found_means_available"
+  },
+  "comicplanet": {
+    "selector": "button.btn-buy:not([disabled])",
+    "mode": "found_means_available"
   }
 }
