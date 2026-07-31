@@ -1,31 +1,97 @@
 {
   "30th-celebration-booster-bundle-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 7,
+    "consecutive_unavailable_checks": 8,
     "stale_warned": false,
     "status": "unavailable"
   },
   "30th-celebration-mini-tins-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 7,
+    "consecutive_unavailable_checks": 8,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "booster-display-dunkelnacht-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "charmander-binder-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "charmander-playmat-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
     "stale_warned": false,
     "status": "unavailable"
   },
   "erhabene-helden-ttb-card-corner": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 6,
+    "consecutive_unavailable_checks": 7,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "erste-partner-illustrations-kollektion-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
     "stale_warned": false,
     "status": "unavailable"
   },
   "fatale-flammen-ttb-card-corner": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 6,
+    "consecutive_unavailable_checks": 7,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "fatale-flammen-ttb-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "illumina-city-mini-tin-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "mega-gengar-tin-128-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "mega-glurak-x-ex-upc-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "mega-kangama-ex-box-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "mega-latias-ex-kollektion-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "mega-pixi-tin-129-geek-haven": {
+    "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
     "stale_warned": false,
     "status": "unavailable"
   },
   "op17-display-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 41,
+    "consecutive_unavailable_checks": 42,
     "stale_warned": false,
     "status": "unavailable"
   },
@@ -41,20 +107,26 @@
     "stale_warned": false,
     "status": "available"
   },
-  "st31-luffy-comicplanet": {
+  "portfolio-shimmering-skyline-geek-haven": {
     "consecutive_errors": 0,
+    "consecutive_unavailable_checks": 1,
+    "stale_warned": false,
+    "status": "unavailable"
+  },
+  "st31-luffy-comicplanet": {
+    "consecutive_errors": 1,
     "consecutive_unavailable_checks": 2,
     "stale_warned": false,
     "status": "unavailable"
   },
   "st32-zoro-comicplanet": {
-    "consecutive_errors": 0,
+    "consecutive_errors": 1,
     "consecutive_unavailable_checks": 2,
     "stale_warned": false,
     "status": "unavailable"
   },
   "st35-sabo-comicplanet": {
-    "consecutive_errors": 0,
+    "consecutive_errors": 1,
     "consecutive_unavailable_checks": 2,
     "stale_warned": false,
     "status": "unavailable"
