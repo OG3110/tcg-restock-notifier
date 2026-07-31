@@ -3,9 +3,8 @@
     "type": "shopify"
   },
   "card-corner": {
-    "selector": ".ausverkauft-inWarenkorb button:not([disabled])",
-    "mode": "found_means_available",
-    "render": "playwright"
+    "selector": "link[itemprop=\"availability\"][href=\"https://schema.org/InStock\"]",
+    "mode": "found_means_available"
   },
   "sapphire-cards": {
     "selector": ".stock.in-stock",
@@ -13,7 +12,7 @@
     "render": "playwright"
   },
   "comicplanet": {
-    "selector": "button.btn-buy:not([disabled])",
+    "selector": "link[itemprop=\"availability\"][href=\"https://schema.org/InStock\"]",
     "mode": "found_means_available"
   }
 }
