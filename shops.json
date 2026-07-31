@@ -14,5 +14,9 @@
   "comicplanet": {
     "selector": "link[itemprop=\"availability\"][href=\"https://schema.org/InStock\"]",
     "mode": "found_means_available"
+  },
+  "geek-haven": {
+    "selector": ".stock.in-stock",
+    "mode": "found_means_available"
   }
 }
