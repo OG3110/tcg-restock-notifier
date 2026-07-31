@@ -1,31 +1,31 @@
 {
   "30th-celebration-booster-bundle-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 1,
+    "consecutive_unavailable_checks": 2,
     "stale_warned": false,
     "status": "unavailable"
   },
   "30th-celebration-mini-tins-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 1,
+    "consecutive_unavailable_checks": 2,
     "stale_warned": false,
     "status": "unavailable"
   },
   "erhabene-helden-ttb-card-corner": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 0,
+    "consecutive_unavailable_checks": 1,
     "stale_warned": false,
-    "status": "available"
+    "status": "unavailable"
   },
   "fatale-flammen-ttb-card-corner": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 0,
+    "consecutive_unavailable_checks": 1,
     "stale_warned": false,
-    "status": "available"
+    "status": "unavailable"
   },
   "op17-display-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 35,
+    "consecutive_unavailable_checks": 36,
     "stale_warned": false,
     "status": "unavailable"
   },
@@ -37,9 +37,9 @@
   },
   "pitch-black-display-sapphire-cards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 1,
+    "consecutive_unavailable_checks": 0,
     "stale_warned": false,
-    "status": "unavailable"
+    "status": "available"
   },
   "st31-luffy-comicplanet": {
     "consecutive_errors": 0,
