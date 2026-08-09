@@ -18,5 +18,8 @@
   "geek-haven": {
     "selector": ".stock.in-stock",
     "mode": "found_means_available"
+  },
+  "geeksheaven": {
+    "type": "shopify"
   }
 }
