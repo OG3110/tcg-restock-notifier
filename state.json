@@ -7,30 +7,30 @@
   },
   "30th-celebration-etb-geeksheaven": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 873,
+    "consecutive_unavailable_checks": 874,
     "stale_warned": true,
     "status": "unavailable"
   },
   "30th-celebration-mini-tins-fantasiacards": {
     "consecutive_errors": 0,
-    "consecutive_unavailable_checks": 1017,
+    "consecutive_unavailable_checks": 1018,
     "stale_warned": true,
     "status": "unavailable"
   },
   "booster-display-dunkelnacht-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 974,
     "stale_warned": true,
     "status": "unavailable"
   },
   "charmander-binder-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 968,
     "stale_warned": true,
     "status": "unavailable"
   },
   "charmander-playmat-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 972,
     "stale_warned": true,
     "status": "unavailable"
@@ -42,7 +42,7 @@
     "status": "available"
   },
   "erste-partner-illustrations-kollektion-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 972,
     "stale_warned": true,
     "status": "unavailable"
@@ -54,97 +54,97 @@
     "status": "available"
   },
   "fatale-flammen-ttb-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 974,
     "stale_warned": true,
     "status": "unavailable"
   },
   "illumina-city-mini-tin-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 973,
     "stale_warned": true,
     "status": "unavailable"
   },
   "illustration-box-vol7-geek-haven": {
-    "consecutive_errors": 73,
+    "consecutive_errors": 74,
     "consecutive_unavailable_checks": 862,
     "stale_warned": true,
     "status": "unavailable"
   },
   "illustration-box-vol8-geek-haven": {
-    "consecutive_errors": 68,
+    "consecutive_errors": 69,
     "consecutive_unavailable_checks": 10,
     "stale_warned": false,
     "status": "unavailable"
   },
   "mega-gengar-tin-128-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 973,
     "stale_warned": true,
     "status": "unavailable"
   },
   "mega-glurak-x-ex-upc-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 974,
     "stale_warned": true,
     "status": "unavailable"
   },
   "mega-kangama-ex-box-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 973,
     "stale_warned": true,
     "status": "unavailable"
   },
   "mega-latias-ex-kollektion-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 974,
     "stale_warned": true,
     "status": "unavailable"
   },
   "mega-pixi-tin-129-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 973,
     "stale_warned": true,
     "status": "unavailable"
   },
   "op14-eb04-booster-geek-haven": {
-    "consecutive_errors": 68,
+    "consecutive_errors": 69,
     "consecutive_unavailable_checks": 927,
     "stale_warned": true,
     "status": "unavailable"
   },
   "op14-eb04-display-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 970,
     "stale_warned": true,
     "status": "unavailable"
   },
   "op15-eb04-booster-geek-haven": {
-    "consecutive_errors": 68,
+    "consecutive_errors": 69,
     "consecutive_unavailable_checks": 927,
     "stale_warned": true,
     "status": "unavailable"
   },
   "op15-eb04-display-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 970,
     "stale_warned": true,
     "status": "unavailable"
   },
   "op16-booster-geek-haven": {
-    "consecutive_errors": 68,
+    "consecutive_errors": 69,
     "consecutive_unavailable_checks": 926,
     "stale_warned": true,
     "status": "unavailable"
   },
   "op16-display-case-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 969,
     "stale_warned": true,
     "status": "unavailable"
   },
   "op17-display-fantasiacards": {
-    "consecutive_errors": 204,
+    "consecutive_errors": 205,
     "consecutive_unavailable_checks": 0,
     "stale_warned": false,
     "status": "available"
@@ -162,25 +162,25 @@
     "status": "available"
   },
   "portfolio-shimmering-skyline-geek-haven": {
-    "consecutive_errors": 25,
+    "consecutive_errors": 26,
     "consecutive_unavailable_checks": 974,
     "stale_warned": true,
     "status": "unavailable"
   },
   "sleeves-14-enel-geek-haven": {
-    "consecutive_errors": 68,
+    "consecutive_errors": 69,
     "consecutive_unavailable_checks": 927,
     "stale_warned": true,
     "status": "unavailable"
   },
   "sleeves-15-yamato-geek-haven": {
-    "consecutive_errors": 68,
+    "consecutive_errors": 69,
     "consecutive_unavailable_checks": 927,
     "stale_warned": true,
     "status": "unavailable"
   },
   "st30-luffy-ace-geek-haven": {
-    "consecutive_errors": 68,
+    "consecutive_errors": 69,
     "consecutive_unavailable_checks": 927,
     "stale_warned": true,
     "status": "unavailable"
